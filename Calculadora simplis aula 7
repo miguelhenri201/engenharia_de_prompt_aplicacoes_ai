@@ -1,0 +1,98 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/miguelhenri201/engenharia_de_prompt_aplicacoes_ai/blob/main/Calculadora%20simplis%20aula%207\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def calculadora(num1, operador, num2):\n",
+        "    \"\"\"\n",
+        "    Calculadora simples que realiza operações básicas entre dois números.\n",
+        "\n",
+        "    Args:\n",
+        "        num1 (float): O primeiro número.\n",
+        "        operador (str): O operador da operação ('+', '-', '*', '/').\n",
+        "        num2 (float): O segundo número.\n",
+        "\n",
+        "    Returns:\n",
+        "        float or str: O resultado da operação ou uma mensagem de erro.\n",
+        "    \"\"\"\n",
+        "    if operador == '+':\n",
+        "        return num1 + num2\n",
+        "    elif operador == '-':\n",
+        "        return num1 - num2\n",
+        "    elif operador == '*':\n",
+        "        return num1 * num2\n",
+        "    elif operador == '/':\n",
+        "        if num2 != 0:\n",
+        "            return num1 / num2\n",
+        "        else:\n",
+        "            return \"Erro: Divisão por zero!\"\n",
+        "    else:\n",
+        "        return \"Operador inválido. Use '+', '-', '*' ou '/' খুঁজে.\"\n",
+        "\n",
+        "# Exemplos de uso:\n",
+        "print(f\"3 + 5 = {calculadora(3, '+', 5)}\")\n",
+        "print(f\"10 - 4 = {calculadora(10, '-', 4)}\")\n",
+        "print(f\"7 * 6 = {calculadora(7, '*', 6)}\")\n",
+        "print(f\"20 / 4 = {calculadora(20, '/', 4)}\")\n",
+        "print(f\"15 / 0 = {calculadora(15, '/', 0)}\")\n",
+        "print(f\"8 ^ 2 = {calculadora(8, '^', 2)}\") # Exemplo de operador inválido\n",
+        "\n",
+        "\n",
+        "# Você pode testar com seus próprios valores aqui:\n",
+        "num1 = float(input(\"Digite o primeiro número: \"))\n",
+        "operador = input(\"Digite o operador (+, -, *, /): \")\n",
+        "num2 = float(input(\"Digite o segundo número: \"))\n",
+        "print(f\"O resultado é: {calculadora(num1, operador, num2)}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2oqEO1voDb6V",
+        "outputId": "9a4a07a5-3af2-49e7-d692-56dd32331273"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "3 + 5 = 8\n",
+            "10 - 4 = 6\n",
+            "7 * 6 = 42\n",
+            "20 / 4 = 5.0\n",
+            "15 / 0 = Erro: Divisão por zero!\n",
+            "8 ^ 2 = Operador inválido. Use '+', '-', '*' ou '/' খুঁজে.\n",
+            "Digite o primeiro número: 3\n",
+            "Digite o operador (+, -, *, /): +\n",
+            "Digite o segundo número: 2\n",
+            "O resultado é: 5.0\n"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "name": "Conheça o Colab",
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
